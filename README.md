@@ -4,7 +4,7 @@
 **Submission deadline:** October 06, 2026, 23:59 WAT
 **International Cybersecurity and Digital Forensics Academy (ICDFA)**
 
-# Lab 1 — Two-VM Network Commissioning and Connectivity Verification
+# Lab 1: Two-VM Network Commissioning and Connectivity Verification
 
 ## Scenario
 
@@ -22,7 +22,7 @@ The task was to configure the virtual network adapters, verify WAN and LAN inter
 
 The brief specifies `10.10.10.1/24` for the firewall LAN and DHCP for the Ubuntu client. Both internal adapters must use exactly `ICDFA-LAN`. The firewall must start before the client.
 
-## Part A — Prepare VirtualBox
+## Part A: Prepare VirtualBox
 
 The screenshots show the laboratory VMs powered off during preparation and the internal network settings for the firewall and client.
 
@@ -41,7 +41,7 @@ The screenshots show the laboratory VMs powered off during preparation and the i
 
 Using the same internal network connects the Ubuntu workstation and the firewall LAN to the same virtual Ethernet segment.
 
-## Part B — Verify OPNsense interfaces
+## Part B: Verify OPNsense interfaces
 
 The OPNsense console shows:
 
@@ -57,7 +57,7 @@ The LAN interface connects to the protected network and acts as the Ubuntu clien
 *OPNsense console displaying WAN and LAN interface assignments and addresses.*
 
 
-## Part C — Verify Ubuntu addressing
+## Part C: Verify Ubuntu addressing
 
 ### IPv4 address and interface status
 
@@ -96,7 +96,7 @@ The default gateway is `10.10.10.1`. Ubuntu uses this gateway for destinations o
 *Ubuntu routing table showing the default route through 10.10.10.1.*
 
 
-## Part D — Perform connectivity tests
+## Part D: Perform connectivity tests
 
 ### 1. Reach the firewall LAN
 
@@ -168,7 +168,7 @@ I accessed the OPNsense dashboard at the firewall LAN address, `10.10.10.1`. The
 *OPNsense management dashboard showing WAN and LAN status.*
 
 
-## Part E — Observe packets in Wireshark
+## Part E: Observe packets in Wireshark
 
 I captured traffic on the Ubuntu Ethernet interface `enp0s3` and inspected the exchanges using the requested display filters.
 
